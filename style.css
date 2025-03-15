@@ -14,10 +14,8 @@
     background-size: cover; /* Asegura que la imagen cubra todo el área del header */
     background-position: center; /* Centra la imagen */
     height: 150px; /* Altura del header */
-    display: flex;
     flex-direction: column;
     justify-content: center;
-    color: white; /* Cambia el color del texto si es necesario */
     position: relative;
         }
 
