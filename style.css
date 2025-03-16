@@ -1,231 +1,248 @@
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #000;
-            margin: 0;
-            padding: 0;
-            color: #fff;
-        }
-        header {
-            display: flex;
-    color: white;
-    padding: 80px;
-    border-bottom: 4px solid hsl(32, 93%, 34%);
-    background-image: url('https://www.dropbox.com/scl/fi/xcv3fcpv87o0nmd3ue0s5/JHM53E34UZBRDPUFEZK6UJSP2U.jpg?rlkey=z393u5ap3lff64bxk7kzzszls&dl=1');
-    background-size: cover; /* Asegura que la imagen cubra todo el área del header */
-    background-position: center; /* Centra la imagen */
-    height: 300px; /* Altura del header */
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+header {
+    display: flex;
+color: white;
+padding: 80px;
+border-bottom: 4px solid hsl(32, 93%, 34%);
+background-image: url('https://www.dropbox.com/scl/fi/xcv3fcpv87o0nmd3ue0s5/JHM53E34UZBRDPUFEZK6UJSP2U.jpg?rlkey=z393u5ap3lff64bxk7kzzszls&dl=1');
+background-size: cover; /* Asegura que la imagen cubra todo el área del header */
+background-position: center; /* Centra la imagen */
+height: 300px; /* Altura del header */
+flex-direction: column;
+justify-content: center;
+position: relative;
+}
 
 /* Filtro de transparencia usando un pseudo-elemento */
 header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Cambia el valor de la transparencia aquí */
-    z-index: 1;
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5); /* Cambia el valor de la transparencia aquí */
+z-index: 1;
 }
 
 /* Estilo del texto */
 header h1, header p {
-    position: relative;
-    z-index: 2; /* Asegura que el contenido esté por encima de la capa de fondo */
-    color: white;
+position: relative;
+z-index: 2; /* Asegura que el contenido esté por encima de la capa de fondo */
+color: white;
 }
 
-        header img {
-            max-width: 150px;
-            height: auto;
-            margin-right: 20px;
-                    z-index: 2; /* Asegura que el contenido esté por encima de la capa de fondo */
+header img {
+    max-width: 150px;
+    height: auto;
+    margin-right: 20px;
+            z-index: 2; /* Asegura que el contenido esté por encima de la capa de fondo */
 
-        }
-        header div {
-            text-align: left;
-        }
-        h1 {
-            margin: 0;
-            font-size: 2em;
-        }
-        p {
-            font-size: 1.2em;
-        }
-        .buttons {
-            margin-top: 30px;
-            text-align: center;
-        }
-        .download-button,
-        .whatsapp-button {
-            display: inline-block;
-            margin: 15px;
-            padding: 15px 30px;
-            text-decoration: none;
-            font-size: 1.2em;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .download-button {
-            background-color: #ff6600;
-            color: white;
-        }
-        .download-button:hover {
-            background-color: #cc5200;
-        }
-        .whatsapp-button {
-            background-color: #25d366;
-            color: white;
-        }
-        .whatsapp-button:hover {
-            background-color: #1caa51;
-        }
-        .plans-section {
-            padding: 50px 20px;
-            background-color: #111;
-            text-align: center;
-        }
-        .plans-section h2 {
-            color: #ff6600;
-            margin-bottom: 30px;
-        }
-        .plans-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .plan {
-            width: 250px;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            position: relative;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
-        }
-        .plan .badge {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: #000;
-            color: #fff;
-            font-size: 0.8em;
-            padding: 5px 10px;
-            border-radius: 5px;
-        }
-        .plan h3 {
-            font-size: 1.5em;
-            margin: 10px 0;
-        }
-        .plan h4 {
-            font-size: 2em;
-            margin: 15px 0;
-        }
-        .plan ul {
-            list-style: none;
-            padding: 0;
-            text-align: left;
-        }
-        .plan ul li {
-            margin: 10px 0;
-        }
-        .plan a {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #000;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .plan a:hover {
-            background-color: #333;
-        }
-        .support-section {
-            margin-top: 50px;
-            padding: 20px;
-            background-color: #111;
-            text-align: left;
-        }
-        .support-section h2 {
-            color: #ff6600;
-        }
-        .support-section ol {
-            margin-left: 20px;
-        }
-        footer {
-            margin-top: 50px;
-            padding: 10px;
-            background-color: #111;
-            color: white;
-            text-align: center;
-        }
+}
+header div {
+    text-align: left;
+}
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+p {
+    font-size: 1.2em;
+}
+.buttons {
+    margin-top: 30px;
+    text-align: center;
+}
 
-        /* Planes de usuario */
-        .plan-user-1 {
-            background-color: #ff6f61; /* Rojo */
-        }
-        .plan-user-2 {
-            background-color: #ff9966; /* Naranja claro */
-        }
-        .plan-user-3 {
-            background-color: #66cc99; /* Verde */
-        }
-        .plan-user-4 {
-            background-color: #6699cc; /* Azul */
-        }
+.download-section{
+    text-align: center;
+}
 
-        /* Planes de distribuidor */
-        .plan-distributor-1 {
-            background-color: #6a1b9a; /* Púrpura */
-        }
-        .plan-distributor-2 {
-            background-color: #8e24aa; /* Púrpura claro */
-        }
-        .plan-distributor-3 {
-            background-color: #d32f2f; /* Rojo */
-        }
-        .plan-distributor-4 {
-            background-color: #0288d1; /* Azul */
-        }
-        .plan-distributor-5 {
-            background-color: #388e3c; /* Verde */
-        }
-        .plan-distributor-6 {
-            background-color: #f57c00; /* Naranja */
-        }
-        .plan-distributor-7 {
-            background-color: #0288d1; /* Azul */
-        }
-        .plan-distributor-8 {
-            background-color: #8bc34a; /* Verde claro */
-        }
-        .plan-distributor-9 {
-            background-color: #f44336; /* Rojo claro */
-        }
-        .plan-distributor-10 {
-            background-color: #ff9800; /* Naranja oscuro */
-        }
+.p-download-section{
+    font-size: 1em;
+    color: beige;
+    text-align: center;
+}
 
- /* Centrar el contenido */
-    .seccion {
-      text-align: center; /* Centra el título */
-      margin: 20px; /* Agrega margen a la sección */
-    }
+.download-button,
+.whatsapp-button {
+    display: inline-block;
+    margin: 15px;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.download-button {
+    background-color: #ff6600;
+    color: white;
+}
+.download-button:hover {
+    background-color: #cc5200;
+}
+.whatsapp-button {
+    background-color: #25d366;
+    color: white;
+}
+.whatsapp-button:hover {
+    background-color: #1caa51;
+}
+.plans-section {
+    padding: 50px 20px;
+    background-color: #111;
+    text-align: center;
+}
+.plans-section h2 {
+    color: #ff6600;
+    margin-bottom: 30px;
+}
+.plans-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.plan {
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+.plan .badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #000;
+    color: #fff;
+    font-size: 0.8em;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.plan h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+.plan h4 {
+    font-size: 2em;
+    margin: 15px 0;
+}
+.plan ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+.plan ul li {
+    margin: 10px 0;
+}
+.plan a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.plan a:hover {
+    background-color: #333;
+}
+.support-section {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #111;
+    text-align: left;
+}
+.support-section h2 {
+    color: #ff6600;
+}
+.support-section ol {
+    margin-left: 20px;
+}
+footer {
+    margin-top: 50px;
+    padding: 10px;
+    background-color: #111;
+    color: white;
+    text-align: center;
+}
 
-    /* Centrar el iframe (video) */
-    .video-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 20px;
-    }
+/* Planes de usuario */
+.plan-user-1 {
+    background-color: #ff6f61; /* Rojo */
+}
+.plan-user-2 {
+    background-color: #ff9966; /* Naranja claro */
+}
+.plan-user-3 {
+    background-color: #66cc99; /* Verde */
+}
+.plan-user-4 {
+    background-color: #6699cc; /* Azul */
+}
 
-    iframe {
-      width: 560px;
-      height: 315px;
-    }
+/* Planes de distribuidor */
+.plan-distributor-1 {
+    background-color: #6a1b9a; /* Púrpura */
+}
+.plan-distributor-2 {
+    background-color: #8e24aa; /* Púrpura claro */
+}
+.plan-distributor-3 {
+    background-color: #d32f2f; /* Rojo */
+}
+.plan-distributor-4 {
+    background-color: #0288d1; /* Azul */
+}
+.plan-distributor-5 {
+    background-color: #388e3c; /* Verde */
+}
+.plan-distributor-6 {
+    background-color: #f57c00; /* Naranja */
+}
+.plan-distributor-7 {
+    background-color: #0288d1; /* Azul */
+}
+.plan-distributor-8 {
+    background-color: #8bc34a; /* Verde claro */
+}
+.plan-distributor-9 {
+    background-color: #f44336; /* Rojo claro */
+}
+.plan-distributor-10 {
+    background-color: #ff9800; /* Naranja oscuro */
+}
+
+.contact-section{
+    padding: 50px 20px;
+    background-color: #111;
+    text-align: center;
+}
+
+/* Centrar el contenido */
+.seccion {
+text-align: center; /* Centra el título */
+margin: 20px; /* Agrega margen a la sección */
+}
+
+/* Centrar el iframe (video) */
+.video-container {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 20px;
+}
+
+iframe {
+width: 560px;
+height: 315px;
+}
