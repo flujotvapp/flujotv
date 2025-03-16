@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pago</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0A192F; /* Azul oscuro característico */
+            color: #ffffff;
+        }
+        .container {
+            width: 60%;
+            margin: 50px auto;
+            background-color: #112D4E; /* Azul más claro */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(255, 140, 0, 0.5);
+        }
+        h1 {
+            text-align: center;
+            color: #FCA311; /* Naranja vibrante */
+        }
+        .payment-option {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #1B365D;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .payment-option:hover {
+            background-color: #FCA311;
+            color: #0A192F;
+        }
+        .payment-option img {
+            width: 50px;
+            height: auto;
+        }
+        .instructions {
+            display: none;
+            padding: 10px;
+            background-color: #FCA311;
+            color: #0A192F;
+            border-left: 3px solid #FFD700;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .paypal-button, .email-button, .whatsapp-button, .button {
+            display: inline-block;
+            background-color: #0070ba;
+            color: white;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            margin: 10px;
+        }
+        .paypal-button:hover, .email-button:hover, .whatsapp-button:hover , .button:hover{
+            background-color: #005ea6;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Elija su Forma de Pago</h1>
+
+    <div class="payment-option" onclick="toggleInstructions('paypal')">
+        <img src="https://www.dropbox.com/scl/fi/1arng0haj1he2disaxqsm/paypal.png?rlkey=6toga20ogeaqe5av4vse41eii&dl=1" alt="PayPal">
+        <span>PayPal</span>
+    </div>
+    <div class="instructions" id="paypal">
+        <p>Instrucciones para realizar el pago con PayPal:</p>
+        <ol>
+            <li>Haga clic en el botón Pagar con PayPal</li>
+            <li>Enviar el valor del plan seleccionado, sin colocar <strong>NINGUNA DESCRIPCION</strong></li>
+            <li>Enviar comprobante de pago por email o whatsaap</li>
+            <li>Una vez confirmado su pago, recibirá sus credenciales por la misma via</li>
+            <a href="https://paypal.me/yemimartinez?country.x=US&locale.x=es_XC" class="paypal-button" target="_blank">Pagar con PayPal</a>
+        </ol>
+    </div>
+
+    <div class="payment-option" onclick="toggleInstructions('tarjeta')">
+        <img src="https://www.dropbox.com/scl/fi/ux72900szh1p974gz9yll/paying-off-ccs_toolbox.jpg?rlkey=hlria03nhhcf468tkdhjy1w58&dl=1" alt="Tarjeta de Crédito/Débito">
+        <span>Tarjeta de Crédito/Débito</span>
+    </div>
+    <div class="instructions" id="tarjeta">
+        <p>Instrucciones para realizar el pago con tarjeta:</p>
+        <ol>
+            <li>Haga clic en el botón deseado</li>
+            <li>Enviar comprobante de pago por email o whatsaap</li>
+            <li>Una vez confirmado su pago, recibirá sus credenciales por la misma via</li>
+        </ol>
+        <a href="https://pay.getmeru.com/bxvyo-" class="button" target="_blank">Plan 1 mes</a>
+        <a href="https://pay.getmeru.com/0ipCfl" class="button" target="_blank">Plan 3 meses</a>
+        <a href="https://pay.getmeru.com/Mg7rte" class="button" target="_blank">Plan 6 meses + 1</a>
+        <a href="https://pay.getmeru.com/vqX_kz" class="button" target="_blank">Plan 12 meses + 2</a>
+
+    </div>
+
+    <div class="payment-option" onclick="toggleInstructions('criptomonedas')">
+        <img src="https://www.dropbox.com/scl/fi/2nkj961qt2s5eev6b95ws/Binance.png?rlkey=kbnjny4shaxieclc1zl3cdgjp&dl=1" alt="Criptomonedas">
+        <span>Criptomonedas (USDT)</span>
+    </div>
+    <div class="instructions" id="criptomonedas">
+        <p>Instrucciones para pagar con criptomonedas:</p>
+        <ol>
+            <li>Seleccione USDT.</li>
+            <li>Para pagar con BINANCE, envie el valor del plan seleccionado al <strong>BINANCE ID: 197694561</strong></li>
+            <li>Para pagos desde otras plataformas enviar el valor considerando las posibles comisiones, a traves de la red TRC20, dirección <strong>TAJJiffuschcPiW2uTxoaZh9gUFKn7R5wM</strong></li>
+            <li>Enviar comprobante de pago por email o whatsaap</li>
+            <li>Una vez confirmado su pago, recibirá sus credenciales por la misma via</li>
+        </ol>
+    </div>
+
+    <div class="payment-option" onclick="toggleInstructions('western_union')">
+        <img src="https://www.dropbox.com/scl/fi/pjky31qcw3et2n2hx2rou/western.png?rlkey=x38ie34y1kqw0dpwns27hehsx&dl=1" alt="Western Union">
+        <span>Western Union</span>
+    </div>
+    <div class="instructions" id="western_union">
+        <p>Instrucciones para realizar el pago con Western Union:</p>
+        <ol>
+            <li>Dirígete a una agencia de Western Union o usa su servicio en línea.</li>
+            <li>Envia el pago por el plan deseado a los siguientes datos, para retiro en EFECTIVO</li>
+            <p>Nombres: Cristhian Rodrigo</p>
+            <p>Apellidos: Martinez Martinez</p>
+            <p>Nro. Documento: 4192007</p>
+            <p>País: Paraguay</p>
+            <p>Ciudad: Ciudad del Este</p>
+            <p>Código Postal: 85867</p>
+            <p>Dirección: Calle Natalicio Talavera</p>
+            <p><strong>IMPORTANTE:</strong> Los datos deben coincidir exactamente</p>
+            <li>Enviar comprobante de pago por email o whatsaap</li>
+            <li>Una vez confirmado su pago, recibirá sus credenciales por la misma via</li>
+        </ol>
+    </div>
+
+    <div class="payment-option" onclick="toggleInstructions('transferencia')">
+        <img src="https://www.dropbox.com/scl/fi/fwtlym602hqm9iil7z35k/IBAN.webp?rlkey=8yi3q3o4hsciabhzvufg4w2gy&dl=1" alt="Transferencia Bancaria">
+        <span>Transferencia Bancaria ACH (EEUU) / IBAN (Europa)</span>
+    </div>
+    <div class="instructions" id="transferencia">
+        <p>Instrucciones para realizar el pago con Transferencia Bancaria:</p>
+        <ol>
+            <li>Realice una transferencia por el plan deseado a los detalles bancarios proporcionados.</li>
+            <li>Para ACH (EE.UU.)</li>
+            <p>Nombre del titular: Cristhian Rodrigo Martinez Martinez            </p>
+            <p>Número de ruta: 101019644</p>
+            <p>Número de cuenta: 215401236417</p>
+            <p>Tipo de cuenta: Checking (Corriente o Cheques)</p>
+            <p>Banco: Lead Bank</p>
+            <p>Dirección: 1801 Main St., Kansas City, MO 64108</p>
+            <li>Para IBAN (Europa).</li>
+            <p> Nombre del titular: Bridge Building Sp.z.o.o.</p>
+            <p>                IBAN: IE35MODR99035505778263            </p>
+
+               <p> BIC: MODRIE22XXX</p>
+             <p>   Banco: Modulr Finance, Ireland Branch</p>
+              <p>  Dirección: Floor 6, 2 Grand Canal Square, Dublin, Ireland</p>
+              <li>Enviar comprobante de pago por email o whatsaap</li>
+              <li>Una vez confirmado su pago, recibirá sus credenciales por la misma via</li>
+          </ol>
+    </div>
+</div>
+
+<div class="container">
+
+            <a href="mailto:playlatino20@gmail.com?subject=Comprobante de Pago&body=Adjunto mi comprobante de pago." class="email-button">Enviar comprobante por Email</a>
+            <a href="https://wa.me/595973158770?text=Adjunto mi comprobante de pago." class="whatsapp-button" target="_blank">Enviar comprobante por WhatsApp</a>
+        </div>
+
+<script>
+    function toggleInstructions(paymentMethod) {
+        document.querySelectorAll('.instructions').forEach(instruction => {
+            instruction.style.display = 'none';
+        });
+        
+        const selectedInstructions = document.getElementById(paymentMethod);
+        if (selectedInstructions) {
+            selectedInstructions.style.display = selectedInstructions.style.display === 'block' ? 'none' : 'block';
+        }
+    }
+</script>
+
+</body>
+</html>
