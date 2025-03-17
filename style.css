@@ -13,7 +13,7 @@ border-bottom: 4px solid hsl(32, 93%, 34%);
 background-image: url('/Images/fondo.jpg');
 background-size: cover; /* Asegura que la imagen cubra todo el área del header */
 background-position: center; /* Centra la imagen */
-height: 300px; /* Altura del header */
+height: 400px; /* Altura del header */
 flex-direction: column;
 justify-content: center;
 position: relative;
