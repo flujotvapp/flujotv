@@ -10,7 +10,7 @@ display: flex;
 color: white;
 padding: 80px 80px 0 80px;
 border-bottom: 4px solid hsl(32, 93%, 34%);
-background-image: url('/images/fondo.jpg');
+background-image: url('https://www.dropbox.com/scl/fi/xcv3fcpv87o0nmd3ue0s5/fondo.jpg?rlkey=z393u5ap3lff64bxk7kzzszls&st=rfiwqawz&dl=1');
 background-size: cover; /* Asegura que la imagen cubra todo el área del header */
 background-position: center; /* Centra la imagen */
 height: 300px; /* Altura del header */
