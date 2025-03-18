@@ -101,7 +101,11 @@ p {
     text-align: center;
 }
 
-.p-download-section{
+.download-section h2, .plans-section h2, .section-tutorials h2{
+    font-size: 1.7em;
+}
+
+.download-section p{
     font-size: 1em;
     color: beige;
     text-align: center;
@@ -231,59 +235,67 @@ footer {
     background-color: #6699cc; /* Azul */
 }
 
-/* Planes de distribuidor */
-.plan-distributor-1 {
-    background-color: #6a1b9a; /* Púrpura */
+/* Centrar el iframe (video) */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    }
+    
+    iframe {
+    width: 560px;
+    height: 315px;
+    }
+
+/*SECCION TUTORIALES*/
+.section-tutorials{
+    text-align: center;
 }
-.plan-distributor-2 {
-    background-color: #8e24aa; /* Púrpura claro */
-}
-.plan-distributor-3 {
-    background-color: #d32f2f; /* Rojo */
-}
-.plan-distributor-4 {
-    background-color: #0288d1; /* Azul */
-}
-.plan-distributor-5 {
-    background-color: #388e3c; /* Verde */
-}
-.plan-distributor-6 {
-    background-color: #f57c00; /* Naranja */
-}
-.plan-distributor-7 {
-    background-color: #0288d1; /* Azul */
-}
-.plan-distributor-8 {
-    background-color: #8bc34a; /* Verde claro */
-}
-.plan-distributor-9 {
-    background-color: #f44336; /* Rojo claro */
-}
-.plan-distributor-10 {
-    background-color: #ff9800; /* Naranja oscuro */
+.section-tutorials h2{
+    color: #ff6600;
 }
 
-.contact-section{
+.section-tutorials-text p{
+font-size: 0.8em;
+}
+
+/* Planes de distribuidor */
+.plan-distributor-1 {
+    background-color: #8e24aa; /* Púrpura claro */
+}
+.plan-distributor-2 {
+    background-color: #d32f2f; /* Rojo */
+}
+.plan-distributor-3 {
+    background-color: #0288d1; /* Azul */
+}
+.plan-distributor-4 {
+    background-color: #388e3c; /* Verde */
+}
+.plan-distributor-5 {
+    background-color: #f57c00; /* Naranja */
+}
+.plan-distributor-6 {
+    background-color: #0288d1; /* Azul */
+}
+
+.contact-section, .info-final{
     padding: 50px 20px;
-    background-color: #111;
+    background-color: #000;
     text-align: center;
 }
 
-/* Centrar el contenido */
-.seccion {
-text-align: center; /* Centra el título */
-margin: 20px; /* Agrega margen a la sección */
+.faqs-section {
+text-align:left ; /* Centra el título */
+margin: 10px; /* Agrega margen a la sección */
 }
 
-/* Centrar el iframe (video) */
-.video-container {
-display: flex;
-justify-content: center;
-align-items: center;
-margin-top: 20px;
-}
+.faqs-section p {
+    font-size: 0.9em;
+    }
 
-iframe {
-width: 560px;
-height: 315px;
-}
+.faqs-section li {
+     font-size: 1.1em;
+     }
+
