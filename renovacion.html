@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renovación de Cuenta - FlujoTV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a2e;
+            color: #ffffff;
+            text-align: center;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            background-color: #16213e;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #0f3460;
+        }
+        h2 {
+            color: #00a8ff;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 90%;
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: none;
+        }
+        button {
+            background-color: #00a8ff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 15px;
+        }
+        button:hover {
+            background-color: #0097e6;
+        }
+        .info {
+            text-align: left;
+            background-color: #0f3460;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .image-container img {
+            width: 100px;
+            margin-top: 10px;
+        }
+
+        #renewalForm{
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Renovación de Cuenta - FlujoTV</h2>
+        
+        <form id="renewalForm">
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" placeholder="Email" required>
+            
+            <label for="username">Usuario FlujoTV</label>
+            <input type="text" id="username" placeholder="Usuario de Flujotv a renovar" required>
+
+            <label for="phone">Número de Celular</label>
+            <input type="tel" id="phone" placeholder="Número de celular" required>
+
+            <label for="country">País</label>
+            <input type="text" id="country" placeholder="País" required>
+
+
+            <label for="plan">Selecciona el plan de renovación</label>
+            <select id="plan">
+                <option value="1 mes - $9 USD">1 mes - $9 USD</option>
+                <option value="3 meses - $27 USD">3 meses - $27 USD</option>
+                <option value="6 meses + 1 de regalo - $49 USD">6 meses + 1 de regalo - $49 USD</option>
+                <option value="12 meses + 2 de regalo - $87 USD">12 meses + 2 de regalo - $87 USD</option>
+            </select>
+
+            <button type="submit">Solicitar Renovación</button>
+        </form>
+
+        <div class="info">
+            <p>🔹 Recuerda poner bien el usuario.</p>
+            <p>🔹 Puedes renovar cuentas de otras personas.</p>
+            <p>🔹 Solo se puede con cuentas dentro del sitio. Sino se le asignará un usuario nuevo</p>
+            <p>🔹 Puedes renovar cuantas veces quieras.</p>
+            <p>🔹 Puedes renovar antes que se termine el tiempo.</p>
+        </div>
+
+        <div class="image-container">
+            <img src="Images/flujologo.png" type="image/png" alt="FlujoTV" >
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("renewalForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const email = document.getElementById("email").value;
+            const username = document.getElementById("username").value;
+            const countryCode = document.getElementById("countryCode").value;
+            const phone = document.getElementById("phone").value;
+            const plan = document.getElementById("plan").value;
+
+            const phoneNumber = countryCode + " " + phone;
+
+            const mailtoLink = `mailto:playlatino20@gmail.com?subject=Renovación de Cuenta&body=
+            Correo: ${email}%0D%0A
+            Usuario: ${username}%0D%0A
+            Número de Celular: ${phoneNumber}%0D%0A
+            Plan Elegido: ${plan}%0D%0A`;
+
+            window.location.href = mailtoLink;
+
+            setTimeout(() => {
+                window.location.href = "payment.html";
+            }, 2000);
+        });
+    </script>
+
+</body>
+</html>
