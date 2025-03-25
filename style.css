@@ -5,36 +5,35 @@ body {
     padding: 0;
     color: #fff;
 }
-header {
-display: flex;
-color: white;
-padding: 80px 80px 0 80px;
-border-bottom: 4px solid hsl(32, 93%, 34%);
-background-image: url('https://www.dropbox.com/scl/fi/xcv3fcpv87o0nmd3ue0s5/fondo.jpg?rlkey=z393u5ap3lff64bxk7kzzszls&st=rfiwqawz&dl=1');
-background-size: cover; /* Asegura que la imagen cubra todo el área del header */
-background-position: center; /* Centra la imagen */
-/*height: 300px;  Altura del header */
-flex-direction: column;
-justify-content: center;
-position: relative;
-}
 
-/* Filtro de transparencia usando un pseudo-elemento */
-header::before {
-content: "";
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: rgba(0, 0, 0, 0.5); /* Cambia el valor de la transparencia aquí */
-z-index: 1;
-}
+    /* Filtro de transparencia usando un pseudo-elemento */
+    header::before {
+        content: ""; /*le da existencia (aunque no tenga contenido visible).*/
+        position: absolute; /*permite posicionarlo sobre el header*/
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; /*top: 0; left: 0; width: 100%; height: 100%; hace que cubra completamente el header*/
+        background-color: rgba(0, 0, 0, 0.5); /*Agrega una capa oscura y semitransparente sobre el header*/
+        }
+    
+header {
+    display: flex;
+    color: white;
+    padding: 80px 80px 0 80px;
+    border-bottom: 4px solid hsl(32, 93%, 34%);
+    background-image: url('https://www.dropbox.com/scl/fi/xcv3fcpv87o0nmd3ue0s5/fondo.jpg?rlkey=z393u5ap3lff64bxk7kzzszls&st=rfiwqawz&dl=1');
+    background-size: cover; /* Asegura que la imagen cubra todo el área del header */
+    background-position: center; /* Centra la imagen */
+    /*height: 300px;  Altura del header */
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    }    
 
 /* Estilo del texto */
 header h1, header p , header img{
 position: relative;
-z-index: 2; /* Asegura que el contenido esté por encima de la capa de fondo */
 color: white;
 }
 
@@ -42,7 +41,6 @@ header img {
     max-width: 150px;
     height: auto;
     margin-right: 20px;
-    z-index: 2; /* Asegura que el contenido esté por encima de la capa de fondo */
 
 }
 header div {
@@ -64,7 +62,7 @@ header div {
     font-size: 18px;
 }
 
-/* Cambio de color al pasar el mouse */
+/* Cambio de color al pasar el mouse - Seudoclase hover*/
 .menu a:hover {
     background-color: #ff6600;
     border-radius: 5px;
@@ -144,7 +142,7 @@ p {
     background-color: #111;
     text-align: center;
 }
-.plans-section h2 {
+.plans-section h2 { /*Selecciona los h2 dentro de la clase .plans-section */
     color: #ff6600;
     margin-bottom: 30px;
 }
